@@ -1,7 +1,7 @@
 # PMG-SQL-Assessment
 
-#Question 1: Generate a query to get the sum of the clicks of the marketing data
+Question 1: Generate a query to get the sum of the clicks of the marketing data
 
-#To get the sum of the clicks, we would need aggregate sum function:
+To get the sum of the clicks, we would need aggregate sum function:
 
-select SUM(clicks) from marketing_data;
+select sum(clicks) from marketing_data;
