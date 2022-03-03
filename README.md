@@ -1,4 +1,4 @@
-# PMG-SQL-Assessment
+# PMG SQL Assessment
 
 Question 1: Generate a query to get the sum of the clicks of the marketing data
 
