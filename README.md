@@ -17,13 +17,19 @@ Since geo is from marketing_data table and revenue is from the store_revenue tab
 
 select sum(R.revenue),S.geo from store_revenue R join marketing_data S on S.id=R.id group by S.geo;
 
-Below is the result of the query:![Screen Shot 2022-03-03 at 8 17 45 PM](https://user-images.githubusercontent.com/64288013/156680812-14df88d8-43e6-4427-b8ac-39bc925f8b7c.png)
+Below is the result of the query:
+![Screen Shot 2022-03-03 at 8 17 45 PM](https://user-images.githubusercontent.com/64288013/156680812-14df88d8-43e6-4427-b8ac-39bc925f8b7c.png)
 
 ## Question 3: Merge these two datasets so we can see impressions, clicks, and revenue together by date and geo. Please ensure all records from each table are accounted for
 
 We will use the same method from question 2 for this question:
 
 select sum(R.revenue),S.impressions ,S.clicks from store_revenue R join marketing_data S on S.id=R.id group by S.geo,S.date;
+
+## Question 4: In your opinion, what is the most efficient store and why?
+
+## Question 5: Generate a query to rank in order the top 10 revenue producing states
+
 
 
 
