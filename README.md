@@ -32,11 +32,30 @@ Below is the result of the query:
 
 ## Question 4: In your opinion, what is the most efficient store and why?
 The most efficient store is:
-- The store with the highest clicks-to-impressions conversion rate. A lot of clicks does not mean a lot of impressions. The ratio is calculated by: (impressions/clicks)
+- The store with the highest clicks-to-impressions conversion rate:
+
+SELECT id, geo, (impressions/clicks) AS conversion_ratio FROM marketing_data
+
+![Screen Shot 2022-03-04 at 2 16 21 AM](https://user-images.githubusercontent.com/64288013/156717306-8d7c50d3-049e-4827-8438-456366b644ff.png)
+
+Store with id 16 has the highest clicks-to-impressions conversion rate, with every 1 click producing an average of 389 impressions
+
 - The store with the highest profit. Revenue alone cannot indicate how effcient a store is because we have to take into account other external factors such as state sales tax, rent, and employee wages which differ depending on the state.
 
 ## Question 5: Generate a query to rank in order the top 10 revenue producing states
 
+To rank in order the top 10 revenue producing states, we would be utilizing the DENSE_RANK function:
+
+SELECT *
+FROM(SELECT store_location,
+DENSE_RANK() OVER (ORDER BY revenue DESC) AS revenue_rank
+FROM store_revenue)
+AS a
+WHERE revenue_rank <=10;
+
+This is the result of the query:
+
+![Screen Shot 2022-03-04 at 2 37 06 AM](https://user-images.githubusercontent.com/64288013/156719952-b7637f30-cd42-4ad6-88f7-629b91b53472.png)
 
 
 
