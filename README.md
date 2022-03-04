@@ -7,9 +7,10 @@ For the PMG SQL Challenge, I would be using MySQL Workbench as my SQL editor. To
 To get the sum of the clicks, we would need aggregate sum function:
 
 select sum(clicks) from marketing_data;
+'''
 
 The result is 1792 clicks
- 
+'''
 ## Question 2: Generate a query to gather the sum of revenue by geo from the store_revenue table
 
 Since geo is from marketing_data table and revenue is from the store_revenue table, we would need to use join to combine the 2 tables to get the desired data:
