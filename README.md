@@ -32,13 +32,13 @@ Below is the result of the query:
 
 ## Question 4: In your opinion, what is the most efficient store and why?
 The most efficient store is:
-- The store with the highest clicks-to-impressions conversion rate:
+- The store with the highest ratio of clicks to impressions, or click-through rate (CTR). We can calculate CTR by dividing the number of clicks by the number of impressions:
 
-SELECT id, geo, (impressions/clicks) AS conversion_ratio FROM marketing_data
+SELECT id, geo, (clicks/impressions)*100 AS CTR FROM marketing_data
 
-![Screen Shot 2022-03-04 at 2 16 21 AM](https://user-images.githubusercontent.com/64288013/156717306-8d7c50d3-049e-4827-8438-456366b644ff.png)
+![Screen Shot 2022-03-06 at 9 48 44 AM](https://user-images.githubusercontent.com/64288013/156928342-af894082-3126-4398-8328-6b0142a92e83.png)
 
-Store with id 16 has the highest clicks-to-impressions conversion rate, with every 1 click producing an average of 389 impressions
+Store with id 4 has the highest CTR (58.4%)
 
 - The store with the highest profit. Revenue alone cannot indicate how effcient a store is because we have to take into account other external factors such as state sales tax, rent, and employee wages which differ depending on the state.
 
