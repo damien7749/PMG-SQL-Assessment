@@ -24,11 +24,11 @@ Below is the result of the query:
 
 We will use the same method from question 2 for this question:
 
-SELECT MDT.impressions,MDT.clicks,SRT.revenue,MDT.date,MDT.geo FROM store_revenue SRT inner join marketing_data MDT on MDT.id=SRT.brand_id
+SELECT MDT.impressions,MDT.clicks,SRT.revenue,MDT.date,MDT.geo FROM store_revenue SRT INNER JOIN marketing_data MDT on MDT.id=SRT.id
 
 Below is the result of the query:
 
-![Screen Shot 2022-03-04 at 1 37 35 AM](https://user-images.githubusercontent.com/64288013/156712575-2c58c60c-53b3-463d-bfde-18d894476c86.png)
+![Screen Shot 2022-03-08 at 5 46 00 PM](https://user-images.githubusercontent.com/64288013/157338592-d65018eb-4a00-4ff5-8dc1-be7acc94d4ef.png)
 
 ## Question 4: In your opinion, what is the most efficient store and why?
 The most efficient store is:
