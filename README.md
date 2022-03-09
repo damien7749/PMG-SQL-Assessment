@@ -47,7 +47,7 @@ Store with id 4 has the highest CTR (58.4%)
 To rank in order the top 10 revenue producing states, we would be utilizing the DENSE_RANK function:
 
 SELECT *
-FROM(SELECT store_location,
+FROM(SELECT store_location, revenue
 DENSE_RANK() OVER (ORDER BY revenue DESC) AS revenue_rank
 FROM store_revenue)
 AS a
